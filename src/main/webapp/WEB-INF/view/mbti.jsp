@@ -10,7 +10,7 @@
 <body>
 <div style="text-align: center">
 <h1>MBTI診断</h1>
-<h2><a href="">START</a></h2>
+<h2><a href="http://localhost:8080/Diagnosis/MbtiServlet2">START</a></h2>
 <p><a href="">サイトトップ</a></p>
 </div>
 </body>
