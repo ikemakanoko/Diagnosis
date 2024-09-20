@@ -11,10 +11,13 @@
 
 </head>
 <body>
-	<h1 style="text-align: center">いぬねこどっち？</h1>
-	<p style="text-align: center">いぬかねこかどっちなんだい！</p>
-	<h2 style="text-align: center">
+	<div style="text-align: center">
+	<h1>いぬねこどっち？</h1>
+	<p>いぬかねこかどっちなんだい！</p>
+	<h2>
 		<a href="http://localhost:8080/MusicalInstrument/musicalInstument2">START</a>
 	</h2>
+	<p><a href="">サイトトップ</p>
+	</div>
 </body>
 </html>

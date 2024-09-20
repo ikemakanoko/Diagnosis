@@ -24,5 +24,6 @@
 		<a href="http://localhost:8080/MusicalInstrument/resultServlet?id=1">Yes</a>&ensp;
 		<a href="http://localhost:8080/MusicalInstrument/resultServlet?id=2">No</a>
 	</h2>
+	<p><a href="">サイトトップ</p>
 </body>
 </html>
