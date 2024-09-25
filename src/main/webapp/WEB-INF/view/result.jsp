@@ -25,6 +25,6 @@
     <h2>${animal}です</h2> -->
 	<!-- <h2><name="animal">です</h2> -->
 	<h2 style="text-align: center">です</h2>
-	<p><a href="">サイトトップ</p>
+	<p><a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</p>
 </body>
 </html>

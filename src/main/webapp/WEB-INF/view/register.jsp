@@ -31,7 +31,7 @@
 	<p>
 	<a href="register">会員登録</a>
 	</p>
-	<p><a href="">サイトトップ</p>
+	<p><a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</p>
 
 
 

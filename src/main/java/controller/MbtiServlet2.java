@@ -26,62 +26,61 @@ public class MbtiServlet2 extends HttpServlet {
 			throws ServletException, IOException {
 
 	//質問1から4　結果
-	String[] question1List = { "E", "I" };
-	String[] question2List = { "S", "N" };
-	String[] question3List = { "T", "F" };
-	String[] question4List = { "J", "P" };
+	String[] questionEIList = { "E", "I" };
+	String[] questionSNList = { "S", "N" };
+	String[] questionTFList = { "T", "F" };
+	String[] questionJPList = { "J", "P" };
 
 	// 文字化け防止
 	request.setCharacterEncoding("UTF-8");
 
 	// フォームデータの取得
-	String[] question1Values = request.getParameterValues("question1");
-	String[] question2Values = request.getParameterValues("question2");
-	String[] question3Values = request.getParameterValues("question3");
-	String[] question4Values = request.getParameterValues("question4");
+	String[] questionEIValues = request.getParameterValues("questionEI");
+	String[] questionSNValues = request.getParameterValues("questionSN");
+	String[] questionTFValues = request.getParameterValues("questionTF");
+	String[] questionJPValues = request.getParameterValues("questionJP");
 
 	// 回答結果を文字列データに変換
-	String question1 = "";
-	if (question1Values != null) {
-		for (String question1Index : question1Values) {
-			int i = Integer.parseInt(question1Index);
-			if (i >= 0 && i < question1List.length) {
-				question1 += question1List[i] + " ";
+	String questionEI = "";
+	if (questionEIValues != null) {
+		for (String questionEIIndex : questionEIValues) {
+			int i = Integer.parseInt(questionEIIndex);
+			if (i >= 0 && i < questionEIList.length) {
+				questionEI += questionEIList[i] + " ";
 			}
+		}
 
-		}
-
-	String question2 = "";
-	if (question2Values != null) {
-		for (String question2Index : question2Values) {
-			int i = Integer.parseInt(question2Index);
-			if (i >= 0 && i < question2List.length) {
-				question2 += question2List[i] + " ";
+	String questionSN = "";
+	if (questionSNValues != null) {
+		for (String questionSNIndex : questionSNValues) {
+			int i = Integer.parseInt(questionSNIndex);
+			if (i >= 0 && i < questionSNList.length) {
+				questionSN += questionSNList[i] + " ";
 			}
 		}
-	String question3 = "";
-	if (question3Values != null) {
-		for (String question3Index : question3Values) {
-			int i = Integer.parseInt(question3Index);
-			if (i >= 0 && i < question3List.length) {
-				question3 += question3List[i] + " ";
+	String questionTF = "";
+	if (questionTFValues != null) {
+		for (String questionTFIndex : questionTFValues) {
+			int i = Integer.parseInt(questionTFIndex);
+			if (i >= 0 && i < questionTFList.length) {
+				questionTF += questionTFList[i] + " ";
 			}
 		}
-	String question4 = "";
-	if (question4Values != null) {
-		for (String question4Index : question4Values) {
-			int i = Integer.parseInt(question4Index);
-			if (i >= 0 && i < question4List.length) {
-				question4 += question4List[i] + " ";
+	String questionJP = "";
+	if (questionJPValues != null) {
+		for (String questionJPIndex : questionJPValues) {
+			int i = Integer.parseInt(questionJPIndex);
+			if (i >= 0 && i < questionJPList.length) {
+				questionJP += questionJPList[i] + " ";
 			}
 		}
 	}
 	
 	// メッセージの設定
-	String message1 = question1.trim().equals("E") ? "E" : "I";
-	String message2 = question2.trim().equals("S") ? "S" : "N"; // 修正
-	String message3 = question3.trim().equals("T") ? "T" : "F"; // 修正
-	String message4 = question4.trim().equals("J") ? "J" : "P"; // 修正
+	String messageEI = questionEI.trim().equals("E") ? "E" : "I";
+	String messageSN = questionSN.trim().equals("S") ? "S" : "N"; // 修正
+	String messageTF = questionTF.trim().equals("T") ? "T" : "F"; // 修正
+	String messageJP = questionJP.trim().equals("J") ? "J" : "P"; // 修正
 
 //				String question2 = "";
 //				if(questiones2 != null) {
@@ -134,18 +133,18 @@ public class MbtiServlet2 extends HttpServlet {
 //				}
 
 	// 完了画面に表示させる内容の準備
-	request.setAttribute("question1", question1);
-	request.setAttribute("question2", question2);
-	request.setAttribute("question3", question3);
-	request.setAttribute("question4", question4);
-	request.setAttribute("message1", message1);
-	request.setAttribute("message2", message2);
-	request.setAttribute("message3", message3);
-	request.setAttribute("message4", message4);
-	System.out.println(message1);
+	request.setAttribute("questionEI", questionEI);
+	request.setAttribute("questionSN", questionSN);
+	request.setAttribute("questionTF", questionTF);
+	request.setAttribute("questionJP", questionJP);
+	request.setAttribute("messageEI", messageEI);
+	request.setAttribute("messageSN", messageSN);
+	request.setAttribute("messageTF", messageTF);
+	request.setAttribute("messageJP", messageJP);
+	System.out.println(messageEI);
 	
 	//アルファベットを順番に並べて表示
-	String combinedMessage = message1 + message2 + message3 + message4;
+	String combinedMessage = messageEI + messageSN + messageTF + messageJP;
 	request.setAttribute("combinedMessage", combinedMessage);
 	//request.setAttribute("message1 + message2 + message3 + message4", message1 + message2 + message3 + message4);
 

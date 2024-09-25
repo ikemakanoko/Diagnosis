@@ -24,6 +24,6 @@
 		<a href="http://localhost:8080/Diagnosis/resultServlet?id=1">Yes</a>&ensp;
 		<a href="http://localhost:8080/Diagnosis/resultServlet?id=2">No</a>
 	</h2>
-	<p><a href="">サイトトップ</p>
+	<p><a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</p>
 </body>
 </html>
