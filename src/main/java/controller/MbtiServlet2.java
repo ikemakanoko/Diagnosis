@@ -26,7 +26,7 @@ public class MbtiServlet2 extends HttpServlet {
 			throws ServletException, IOException {
 
 	//質問1から4　結果
-	String[] questionEIList = { "E", "I" };
+	String[] questionList   = { "E", "I" };
 	String[] questionSNList = { "S", "N" };
 	String[] questionTFList = { "T", "F" };
 	String[] questionJPList = { "J", "P" };
@@ -35,18 +35,18 @@ public class MbtiServlet2 extends HttpServlet {
 	request.setCharacterEncoding("UTF-8");
 
 	// フォームデータの取得
-	String[] questionEIValues = request.getParameterValues("questionEI");
+	String[] questionValues = request.getParameterValues("question");
 	String[] questionSNValues = request.getParameterValues("questionSN");
 	String[] questionTFValues = request.getParameterValues("questionTF");
 	String[] questionJPValues = request.getParameterValues("questionJP");
 
 	// 回答結果を文字列データに変換
-	String questionEI = "";
-	if (questionEIValues != null) {
-		for (String questionEIIndex : questionEIValues) {
-			int i = Integer.parseInt(questionEIIndex);
-			if (i >= 0 && i < questionEIList.length) {
-				questionEI += questionEIList[i] + " ";
+	String question = "";
+	if (questionValues != null) {
+		for (String questionIndex : questionValues) {
+			int i = Integer.parseInt(questionIndex);
+			if (i >= 0 && i < questionList.length) {
+				question += questionList[i] + " ";
 			}
 		}
 
@@ -77,7 +77,7 @@ public class MbtiServlet2 extends HttpServlet {
 	}
 	
 	// メッセージの設定
-	String messageEI = questionEI.trim().equals("E") ? "E" : "I";
+	String message = question.trim().equals("E") ? "E" : "I";
 	String messageSN = questionSN.trim().equals("S") ? "S" : "N"; // 修正
 	String messageTF = questionTF.trim().equals("T") ? "T" : "F"; // 修正
 	String messageJP = questionJP.trim().equals("J") ? "J" : "P"; // 修正
@@ -133,18 +133,18 @@ public class MbtiServlet2 extends HttpServlet {
 //				}
 
 	// 完了画面に表示させる内容の準備
-	request.setAttribute("questionEI", questionEI);
+	request.setAttribute("question", question);
 	request.setAttribute("questionSN", questionSN);
 	request.setAttribute("questionTF", questionTF);
 	request.setAttribute("questionJP", questionJP);
-	request.setAttribute("messageEI", messageEI);
+	request.setAttribute("message", message);
 	request.setAttribute("messageSN", messageSN);
 	request.setAttribute("messageTF", messageTF);
 	request.setAttribute("messageJP", messageJP);
-	System.out.println(messageEI);
+	System.out.println(message);
 	
 	//アルファベットを順番に並べて表示
-	String combinedMessage = messageEI + messageSN + messageTF + messageJP;
+	String combinedMessage = message + messageSN + messageTF + messageJP;
 	request.setAttribute("combinedMessage", combinedMessage);
 	//request.setAttribute("message1 + message2 + message3 + message4", message1 + message2 + message3 + message4);
 

@@ -14,15 +14,15 @@
 	<h1>MBTI診断</h1>
 	<p>二つの質問のうち、一つだけあなたの考え方にあてはまるものを選んでください。</p>
 	<p>診断ボタンを押すと診断結果が表示されます。</p>
-	<form action="MbtiResultServlet" method="post">
+	<form action="" method="post">
 		<h2>Q1</h2>
 		<p>
-			<input type="radio" name="questionEI" value="E" id="EI"><!--Eの質問  -->
-			<label for="EI">大勢でいるほうが好きだ</label>
+			<input type="radio" name="question" value="E" id="eI"><!--Eの質問  -->
+			<label for="eI">大勢でいるほうが好きだ</label>
 		</p>
 		<p>
-			<input type="radio" name="questionEI" value="I" id="IE"><!--Iの質問 -->
-			<label for="IE">一人でいるほうが好きだ</label>
+			<input type="radio" name="question" value="I" id="Ie"><!--Iの質問 -->
+			<label for="Ie">一人でいるほうが好きだ</label>
 		</p>
 
 		<h2>Q2</h2>
@@ -56,7 +56,7 @@
 		</p>
 		<br>
 		<p>
-			<input type="submit" value="診断">
+			<a href=""><input type="submit" value="診断"></a>
 		</p>
 	</form>
 	

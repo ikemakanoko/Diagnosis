@@ -17,7 +17,7 @@
 <main>
 	<h2><a href="http://localhost:8080/Diagnosis/musicalInstrument">いぬねこどっち</a></h2>
 	<h2><a href="http://localhost:8080/Diagnosis/MbtiServlet">MBTI診断</a></h2>
-	<h2><a href="">パーソナルカラー診断(未実装)</a></h2>
+	<h2><a href="http://localhost:8080/Diagnosis/PersonalColorServlet">パーソナルカラー診断</a></h2>
 	<h2><a href=""></a></h2>
 	<h2><a href=""></a></h2>
 	
