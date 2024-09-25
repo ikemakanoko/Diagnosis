@@ -8,13 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/MbtiServlet")
-public class MbtiServlet extends HttpServlet {
+/**
+ * Servlet implementation class MbtiResultServlet
+ */
+@WebServlet("/MbtiResultServlet")
+public class MbtiResultServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/view/mbtiStart.jsp")
+		request.getRequestDispatcher("/WEB-INF/view/mbtiResult.jsp")
 				.forward(request, response);
 	}
 
