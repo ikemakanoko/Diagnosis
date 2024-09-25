@@ -4,52 +4,64 @@
 <head>
 <meta charset="UTF-8">
 
-<title>リスト型で回答</title>
+<title>リスト型で回答MBTI</title>
 <link rel="stylesheet" href="">
 
 </head>
-
 <body>
-<form action="" method="post">
-	<h1>Q1</h1>
-	<p>
-		<input type="checkbox" name="question1" value="0">Eの質問 大勢で過ごしているほうが好きだ
-	</p>
-	<p>
-		<input type="checkbox" name="question1" value="1">Iの質問　一人でいるほうが好きだ
-	</p>
+	<!-- 画像を表示させたい -->
+	<img src="/Diagnosis/src/main/webapp/WEB-INF/view/images/capital_b.png" alt="">
+	<h1>MBTI診断</h1>
+	<p>二つの質問のうち、一つだけあなたの考え方にあてはまるものを選んでください。</p>
+	<p>診断ボタンを押すと診断結果が表示されます。</p>
+	<form action="" method="post">
+		<h2>Q1</h2>
+		<p>
+			<input type="radio" name="question" value="E" id="eI"><!--Eの質問  -->
+			<label for="eI">大勢でいるほうが好きだ</label>
+		</p>
+		<p>
+			<input type="radio" name="question" value="I" id="Ie"><!--Iの質問 -->
+			<label for="Ie">一人でいるほうが好きだ</label>
+		</p>
 
-	<h1>Q2</h1>
-	<p>
-		<input type="checkbox" name="question2" value="2">Sの質問　感覚　安定性や信頼性を大事にする
-	</p>
-	<p>
-		<input type="checkbox" name="question2" value="3">Nの質問　直感　新しいアイデアを出すのは得意
-	</p>
+		<h2>Q2</h2>
+		<p>
+			<input type="radio" name="questionSN" value="S" id="SN"><!-- Sの質問 --> 
+			<label for="SN">事実に基づいて物事を判断することが多い。「何が」「どうした」などを大切にする。現実主義である</label>
+		</p>
+		<p>
+			<input type="radio" name="questionSN" value="N" id="NS"><!-- Nの質問 --> 
+			<label for="NS">想像力には自身がある。「かもしれない」という発想がたくさん出てくる。理想主義である。</label>
+		</p>
 
-	<h1>Q3</h1>
-	<p>
-		<input type="checkbox" name="question3" value="4">Tの質問　自分の軸を持っている
-	</p>
-	<p>
-		<input type="checkbox" name="question3" value="5">Fの質問　気づかいができる
-	</p>
+		<h2>Q3</h2>
+		<p>
+			<input type="radio" name="questionTF" value="T" id="TF"><!-- Tの質問 -->
+			<label for="TF">何かを解決したいとき合理的な完結さや、客観的な正しさを求める。感情は二の次である。</label>
+		</p>
+		<p>
+			<input type="radio" name="questionTF" value="F" id="FT"><!--Fの質問  -->
+			<label for="FT">他人の気持ちに敏感であり、結果より過程を重視するタイプである。価値観や倫理観を大切にする。</label>
+		</p>
 
-	<h1>Q4</h1>
-	<p>
-		<input type="checkbox" name="question4" value="6">Jの質問　計画性があり、決断力がある
-	</p>
-	<p>
-		<input type="checkbox" name="question4" value="7">Pの質問　協調性を重んじる、柔軟性がある
-	</p>
-	<br>
-	<p>
-	<input type="submit">診断
-	</p>
+		<h2>Q4</h2>
+		<p>
+			<input type="radio" name="questionJP" value="J" id="JP"><!-- Jの質問 -->
+			<label for="JP">計画性があり、決断力がある　秩序　几帳面　完璧に素早くこなす A型っぽいとよく言われる</label>
+		</p>
+		<p>
+			<input type="radio" name="questionJP" value="P" id="PJ"><!-- Pの質問 -->
+			<label for="PJ">協調性を重んじる、柔軟性がある　マイペース　適応力が高い　意思決定より探求に幸せを感じる</label>
+		</p>
+		<br>
+		<p>
+			<a href=""><input type="submit" value="診断"></a>
+		</p>
 	</form>
-
+	
 	<p>
-		<a href="">サイトトップ</a>
+		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
 	</p>
 </body>
 </html>

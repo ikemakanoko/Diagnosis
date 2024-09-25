@@ -4,11 +4,12 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Insert title here</title>
+<title>質問</title>
 <link rel="stylesheet" href="">
 
 </head>
 <body>
+	<form action="" method="post">
 	<h1 style="text-align: center">質問</h1>
 	<p style="text-align: center">ニャー???</p>
 	<!-- 参考：JWSP06
@@ -21,9 +22,14 @@
 	</label>
 	</p> -->
 	<h2 style="text-align: center">
-		<a href="http://localhost:8080/MusicalInstrument/resultServlet?id=1">Yes</a>&ensp;
-		<a href="http://localhost:8080/MusicalInstrument/resultServlet?id=2">No</a>
+		<a href="http://localhost:8080/Diagnosis/resultServlet?id=1">Yes</a>&ensp;
+		<a href="http://localhost:8080/Diagnosis/resultServlet?id=2">No</a>
 	</h2>
-	<p><a href="">サイトトップ</p>
+	</form>
+	
+	<p>
+	<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ
+	</p>
+	
 </body>
 </html>

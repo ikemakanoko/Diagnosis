@@ -17,7 +17,7 @@ public class SiteTopServlet extends HttpServlet{
 
 	public void init(ServletConfig config) throws ServletException{
 		super.init(config);
-		Integer count = 0;
+		Integer count = 1;
 		ServletContext application = config.getServletContext();
 		application.setAttribute("count", count);
 	}

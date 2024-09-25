@@ -16,7 +16,7 @@ public class MusicalInstrument2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/view/choice.jsp")
+		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentChoice.jsp")
 				.forward(request, response);
 		}
 

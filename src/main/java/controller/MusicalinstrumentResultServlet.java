@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 import domain.Catdog;
 
 @WebServlet("/resultServlet")
-public class ResultServlet extends HttpServlet {
+public class MusicalinstrumentResultServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -64,7 +64,7 @@ public class ResultServlet extends HttpServlet {
 			}
 		}
 		//次の画面に遷移
-		request.getRequestDispatcher("/WEB-INF/view/result.jsp")
+		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentResult.jsp")
 				.forward(request, response);
 
 	}
