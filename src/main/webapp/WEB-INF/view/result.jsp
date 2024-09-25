@@ -15,10 +15,10 @@
 	<h1 style="text-align: center">結果発表</h1>
 	<c:if test="${id = '1'}">
     	<c:if test="${flg }">
-    	ねこ
+    	<p>ねこ</p>
     	</c:if>
     	<c:if test="${!flg }">
-    	いぬ
+    	<p>いぬ</p>
     	</c:if>
 	</c:if>
 	<!--<c:set var="animal" value="${param.animalName}" />
