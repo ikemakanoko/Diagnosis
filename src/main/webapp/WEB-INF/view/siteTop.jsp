@@ -16,8 +16,11 @@
 </header>
 <main>
 	<h2><a href="http://localhost:8080/Diagnosis/musicalInstrument">いぬねこどっち</a></h2>
+	<p>いぬ派ですか？ねこ派ですか？</p>
 	<h2><a href="http://localhost:8080/Diagnosis/MbtiServlet">MBTI診断</a></h2>
+	<p>４問2択の選択肢を選んでいただくだけで簡易的なMBTI診断ができます</p>
 	<h2><a href="http://localhost:8080/Diagnosis/PersonalColorServlet">パーソナルカラー診断</a></h2>
+	<p>パーソナルカラーを診断できます。おすすめのコスメや服の色などがわかります。</p>
 	<h2><a href=""></a></h2>
 	<h2><a href=""></a></h2>
 	
