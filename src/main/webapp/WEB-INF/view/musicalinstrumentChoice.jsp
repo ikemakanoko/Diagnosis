@@ -9,27 +9,18 @@
 
 </head>
 <body>
+	<div style="text-align: center">
 	<form action="" method="post">
-	<h1 style="text-align: center">質問</h1>
-	<p style="text-align: center">ニャー???</p>
-	<!-- 参考：JWSP06
-	<p>
-	<label>
-		<input type="radio" name="id" value="Yes" checked>Yes
-	</label>
-	<label>
-		<input type="radio" name="id" value="No">No
-	</label>
-	</p> -->
-	<h2 style="text-align: center">
-		<a href="http://localhost:8080/Diagnosis/resultServlet?id=1">Yes</a>&ensp;
-		<a href="http://localhost:8080/Diagnosis/resultServlet?id=2">No</a>
-	</h2>
+		<h1>質問</h1>
+		<p>ニャー???</p>
+		<h2>
+			<a href="">Yes</a>&ensp;<a href="">No</a>
+		</h2>
 	</form>
-	
+
 	<p>
-	<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ
+		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ 
 	</p>
-	
+
 </body>
 </html>

@@ -21,8 +21,13 @@ public class MusicalInstrument2 extends HttpServlet {
 		}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		//文字化け防止
+		request.setCharacterEncoding("UTF-8");
+		
+		int resultcat = 1;
+		int resultdog = 2;
+		System.out.println(resultcat);
+		System.out.println(resultdog);
 	}
 
 }

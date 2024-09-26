@@ -59,11 +59,12 @@
 			<a href=""><input type="submit" value="診断"></a>
 		</p>
 	</form>
-	
+	<h2>診断結果</h2>
+	<h1>${result}</h1>
 	<p>
 		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
 	</p>
 	
-	<h1>${result}</h1>
+	
 </body>
 </html>
