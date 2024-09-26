@@ -17,11 +17,11 @@
 	<form action="" method="post">
 		<h2>Q1</h2>
 		<p>
-			<input type="radio" name="question" value="E" id="eI"><!--Eの質問  -->
+			<input type="radio" name="questionEI" value="E" id="eI"><!--Eの質問  -->
 			<label for="eI">大勢でいるほうが好きだ</label>
 		</p>
 		<p>
-			<input type="radio" name="question" value="I" id="Ie"><!--Iの質問 -->
+			<input type="radio" name="questionEI" value="I" id="Ie"><!--Iの質問 -->
 			<label for="Ie">一人でいるほうが好きだ</label>
 		</p>
 
@@ -63,5 +63,7 @@
 	<p>
 		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
 	</p>
+	
+	<h1>${result}</h1>
 </body>
 </html>
