@@ -14,7 +14,7 @@ public class MusicalinstrumentResultServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		//次の画面に遷移
 		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentResult.jsp")
 				.forward(request, response);
@@ -23,5 +23,7 @@ public class MusicalinstrumentResultServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		}
+
 	}
-}
