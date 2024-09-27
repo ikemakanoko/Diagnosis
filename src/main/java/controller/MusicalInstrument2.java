@@ -30,37 +30,40 @@ public class MusicalInstrument2 extends HttpServlet {
 			throws ServletException, IOException {
 		//文字化け防止
 		request.setCharacterEncoding("UTF-8");
-		
+
 		try {
 			//DB接続、利用
 			InitialContext ctx = new InitialContext();
 			DataSource ds = (DataSource) ctx.lookup("java:com@/env/jsbc/diagnosis_db");
 			Connection con = ds.getConnection();
 
-			String sql = "SELECT animal FROM diagnosis_db.animal_table WHERE id=?";
+			String sql = "SELECT animal FROM diagnosis_db.animal_table.(id, animal) WHERE (?,?)";
 			PreparedStatement stmt = con.prepareStatement(sql);
 
 			String animal = request.getParameter("animal");
 			stmt.setObject(1, "ねこ");//1番目の？に入る値
 			stmt.setObject(2, "いぬ");//2番目の？に入る値
-			
+
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				int id = rs.getInt("id");
-				String animal = rs.getString("animal");
+				
+				// フォームデータの取得
+				String catdog = request.getParameter("id");
+				
+				request.setAttribute("num",id);
+				request.setAttribute("catdog",animal);
 			}
 		} catch (Exception e) {
 			// 例外処理
+			throw new ServletException(e);
 		} finally {
 			try {
-				if (con != null) {
-					con.close();
-				}
 			} catch (Exception e) {
 				// 例外処理
 			}
 
-	}
+		}
 	}
 
 }

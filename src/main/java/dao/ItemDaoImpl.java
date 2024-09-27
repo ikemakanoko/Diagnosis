@@ -1,5 +1,6 @@
 package dao;
 
-public class ItemDaoImpl {
-
-}
+public class ItemDaoImpl implements MemberDao {
+	
+	
+	}
