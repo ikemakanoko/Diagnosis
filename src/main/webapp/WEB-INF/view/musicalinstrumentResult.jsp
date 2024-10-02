@@ -9,12 +9,12 @@
 
 </head>
 <body>
-	<div  style="text-align: center">
-	<h1>結果発表</h1>
+	<div style="text-align: center">
+		<h1>結果発表</h1>
 		<h2>${animal}です</h2>
-	<p>
-		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ
-	</p>
+		<p>
+			<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ 
+		</p>
 	</div>
 </body>
 </html>

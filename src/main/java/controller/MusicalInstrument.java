@@ -17,7 +17,6 @@ public class MusicalInstrument extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// DB接続
 		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentStart.jsp")
 				.forward(request, response);
 	}

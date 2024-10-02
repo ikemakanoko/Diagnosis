@@ -5,11 +5,16 @@
 <meta charset="UTF-8">
 
 <title>パーソナルカラー</title>
- <link rel="stylesheet" href="">
+<link rel="stylesheet" href="">
 
 </head>
 <body>
-<h1>パーソナルカラー診断</h1>
-<a href=""><h1>START</h1></a>
+	<div style="text-align: center">
+		<h1>パーソナルカラー診断</h1>
+		<a href="http://localhost:8080/Diagnosis/personalColor2"><h1>START</h1></a>
+		<p>
+			<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
+		</p>
+	</div>
 </body>
 </html>

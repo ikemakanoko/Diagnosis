@@ -14,8 +14,8 @@
 		<h1>質問</h1>
 		<p>ニャー???</p>
 		<h2>
-			<input type="submit" name="animal" value="Yes">&ensp;
-			<input type="submit" name="animal" value="No">
+			<input type="submit" value="Yes" name="Yes">&ensp;
+			<input type="submit" value="No" name="No">
 		</h2>
 	</form>
 	<p>
