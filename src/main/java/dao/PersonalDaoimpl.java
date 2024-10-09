@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,26 +19,26 @@ public class PersonalDaoimpl implements PersonalDao {
 	}
 
 	@Override
-	public List<Personal> findAll() {
-		List<Personal> personals = new ArrayList<>();
-		String sql = "select * from personal_color";
-		Connection con = ds.getConnection(); 
+	public List<Personal> findAll() throws Exception {
+		List<Personal> personalList = new ArrayList<>();
+		try(Connection con = ds.getConnection()) {
+			String sql = "select * from personal_color";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
-			while (rs.next());
-			Integer id = rs.getInt("id");
-			String personalcolor = rs.getString("personalcolor");
-			String color = rs.getString("color");
-			String eye = rs.getString("eye");
-			String hair = rs.getString("hair");
-			String sunburn = rs.getString("sunburn");
-			String rip = rs.getString("rip");
-			String praise = rs.getString("praise");
-			String impress = rs.getString("impress");
-			String acce = rs.getString("acce");
-			String rock = rs.getString("rock");
-			new Personal(id, personalcolor, color, eye, hair, sunburn, rip, praise, impress, acce, rock);
-		}
+			while (rs.next()) {
+				personalList.add(mapToPersonal(rs));
+			}
+	} catch (Exception e) {
+		throw e;
+	} return personalList;
+}
+	
+	private Personal mapToPersonal(ResultSet rs) throws SQLException {
+		Personal personal = new Personal();
+		personal.setId(rs.getInt("id"));
+		personal.setId(rs.getInt("id"));
+		return null;
+	}
 
 	@Override
 	public Personal findById(Integer id) {
