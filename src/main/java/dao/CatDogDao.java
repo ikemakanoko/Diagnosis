@@ -1,11 +1,11 @@
 package dao;
 
-import java.lang.reflect.Member;
 import java.util.List;
+
+import domain.Catdog;
 
 public interface CatDogDao {
 	//データの選択
-	List<Member> findAll() throws Exception;
-	
-	Member findById(Integer id) throws Exception;
+	List<Catdog> findAll();
+	Catdog findById(Integer id) throws Exception;
 }

@@ -39,7 +39,7 @@ public class MbtiServlet2 extends HttpServlet {
 	request.setAttribute("questionTF", questionTFValue);
 	request.setAttribute("questionJP", questionJPValue);
 	//アルファベットを順番に並べて表示
-	String  result = questionEIValue + questionSNValue + questionTFValue + questionJPValue; 
+	String result = questionEIValue + questionSNValue + questionTFValue + questionJPValue; 
 	request.setAttribute("result", result);
 
 	//完了画面の表示

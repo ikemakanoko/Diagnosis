@@ -1,4 +1,5 @@
 <%@ page pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,8 +15,8 @@
 		<h1>質問</h1>
 		<p>ニャー???</p>
 		<h2>
-			<input type="submit" value="Yes" name="Yes">&ensp;
-			<input type="submit" value="No" name="No">
+			<input type="submit" value=Yes name=choice>&ensp;
+			<input type="submit" value=No name=choice>
 		</h2>
 	</form>
 	<p>

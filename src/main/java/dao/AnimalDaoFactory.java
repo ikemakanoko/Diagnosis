@@ -4,13 +4,14 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class DaoFactory {
+public class AnimalDaoFactory {
+	
 	public static CatDogDao createCatDogDao() {
 		return new AnimalDaoImpl(getDataSource());
+		
 	}
-
 	private static DataSource getDataSource() {
-		//オブジェクトを用意し、null(何を入れるか決めてないよー)をする　それをctx,dsに代入
+		//オブジェクトを用意し、null(何を入れるか決めてない)をする　それをctx,dsに代入
 		InitialContext ctx = null;
 		DataSource ds = null;
 		//try catchで囲む
