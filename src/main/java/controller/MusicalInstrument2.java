@@ -49,6 +49,7 @@ public class MusicalInstrument2 extends HttpServlet {
 		// DAOからデータ取得
 		CatDogDao catDogDao = AnimalDaoFactory.createCatDogDao();
 		List<Catdog> catDogList = catDogDao.findAll();
+		id = ("id");
 		
 		if (id.equals("id=1")) {
 			animal = "ねこ";
