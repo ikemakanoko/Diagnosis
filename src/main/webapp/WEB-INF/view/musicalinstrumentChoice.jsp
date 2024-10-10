@@ -15,12 +15,12 @@
 		<h1>質問</h1>
 		<p>ニャー???</p>
 		<h2>
-			<input type="submit" value=Yes name=choice>&ensp;
-			<input type="submit" value=No name=choice>
+			<input type="submit" value=Yes name=id=1　id=1>&ensp;
+			<input type="submit" value=No name=id=2　id=2>
 		</h2>
 	</form>
 	<p>
-		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ 
+		<a href="siteTop">サイトトップ 
 	</p>
 
 </body>

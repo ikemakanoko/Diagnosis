@@ -27,6 +27,8 @@ public class MusicalInstrument2 extends HttpServlet {
 			CatDogDao catDogDao = AnimalDaoFactory.createCatDogDao();
 			List<Catdog> catDogList = catDogDao.findAll();
 
+			request.setAttribute("animal", catDogList);
+
 			//jspへフォワード
 			request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentChoice.jsp")
 					.forward(request, response);
@@ -39,11 +41,24 @@ public class MusicalInstrument2 extends HttpServlet {
 			throws ServletException, IOException {
 		//文字化け防止
 		request.setCharacterEncoding("UTF-8");
-		//ユーザーの入力情報の受け取り　getParameter(パラメータの取得)
-		request.getAttribute("id");
-		request.setAttribute("animal", "<catDogList>");
-		//受け取ったデータをニ択で分けてdata baseからいぬ、ねこの結果を持ってきて表示させる
-		//結果画面の表示
+
+		// ユーザーの入力情報の受け取り
+		String animal = request.getParameter("animal");
+		String id = request.getParameter("id"); // ユーザーの選択を取得
+
+		// DAOからデータ取得
+		CatDogDao catDogDao = AnimalDaoFactory.createCatDogDao();
+		List<Catdog> catDogList = catDogDao.findAll();
+		
+		if (id.equals("id=1")) {
+			animal = "ねこ";
+		} else {
+			animal = "いぬ";
+		}
+		// 結果をリクエストにセット
+		request.setAttribute("animal", animal);
+
+		// 結果画面の表示
 		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentResult.jsp")
 				.forward(request, response);
 	}

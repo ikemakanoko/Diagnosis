@@ -19,9 +19,9 @@ public class AnimalDaoImpl implements CatDogDao {
 	}
 
 	@Override
-	public List<Catdog> findAll(){
+	public List<Catdog> findAll() {
 		List<Catdog> catdogList = new ArrayList<>();
-		
+
 		try (Connection con = ds.getConnection()) {
 			String sql = "SELECT * FROM diagnosis_db.animal";
 			PreparedStatement stmt = con.prepareStatement(sql);
@@ -30,16 +30,20 @@ public class AnimalDaoImpl implements CatDogDao {
 				catdogList.add(mapToCatdog(rs));
 			}
 		} catch (Exception e) {
-			
+
 		}
 		return catdogList;
 	}
 
 	@Override
 	public Catdog findById(Integer id) throws Exception {
-		// TODO 自動生成されたメソッド・スタブ
+		List<Catdog> catdogList = new ArrayList<>();
+		try (Connection con = ds.getConnection()) {
+		String sql = "animal from animal_table where id=1";
+		PreparedStatement stmt = con.prepareStatement(sql);
+		ResultSet rs = stmt.executeQuery();
 		return null;
-	}
+	}}
 
 	public DataSource getDs() {
 		return ds;

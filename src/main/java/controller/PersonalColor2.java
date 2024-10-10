@@ -43,17 +43,15 @@ public class PersonalColor2 extends HttpServlet {
 		String choice4 = request.getParameter("choice4");
 		String result = request.getParameter("result");
 		String explanation = request.getParameter("explanation");
+		PersonalDao personalDao = PersonalDaoFactory.createPersonalDao();
 		
-		System.out.println(question);
-		System.out.println(choice1);
-		System.out.println(choice2);
-		System.out.println(choice3);
-		System.out.println(choice4);
-		System.out.println(result);
-		System.out.println(explanation);
+		//choiceのうちどれか一つでも押したら次のquestionに遷移
+		//questionのidは5、表の縦軸にパーソナルカラーのちがい横軸に質問の種類
+		//反復で最後のquestionまで回す　最後まで回したら結果(result)と説明文(explanatoin)を出す　それが難しかったら、同じページの該当するパーソナルカラーの場所に移動する
 		
-		
-		
+		while (.()) {
+			type type = (type) it.next();
+			
+		}
 	}
-
-}
+	}

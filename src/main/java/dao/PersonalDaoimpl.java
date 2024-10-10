@@ -36,7 +36,16 @@ public class PersonalDaoimpl implements PersonalDao {
 	private Personal mapToPersonal(ResultSet rs) throws SQLException {
 		Personal personal = new Personal();
 		personal.setId(rs.getInt("id"));
-		personal.setId(rs.getInt("id"));
+		personal.setPersonalcolor(rs.getString("personalcolor"));
+		personal.setColor(rs.getString("color"));
+		personal.setEye(rs.getString("eye"));
+		personal.setHair(rs.getString("hair"));
+		personal.setSunburn(rs.getString("sunburn"));
+		personal.setRip(rs.getString("rip"));
+		personal.setPraise(rs.getString("praise"));
+		personal.setImpress(rs.getString("impress"));
+		personal.setAcce(rs.getString("acce"));
+		personal.setRock(rs.getString("rock"));
 		return null;
 	}
 
