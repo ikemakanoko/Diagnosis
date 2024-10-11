@@ -46,12 +46,15 @@ public class MusicalInstrument2 extends HttpServlet {
 		String animal = request.getParameter("animal");
 		String id = request.getParameter("id"); // ユーザーの選択を取得
 
-		// DAOからデータ取得
+		System.out.println(id);
+		
+		// DAOからデータ取得 一覧表示
 		CatDogDao catDogDao = AnimalDaoFactory.createCatDogDao();
 		List<Catdog> catDogList = catDogDao.findAll();
-		id = ("id");
 		
-		if (id.equals("id=1")) {
+		if (id == null) {
+			animal = "エラー";
+		} else if (id.equals("Yes")) {
 			animal = "ねこ";
 		} else {
 			animal = "いぬ";
