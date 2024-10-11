@@ -19,7 +19,7 @@ public class PersonalDaoimpl implements PersonalDao {
 	}
 
 	@Override
-	public List<Personal> findAll() throws Exception {
+	public List<Personal> findAll() {
 		List<Personal> personalList = new ArrayList<>();
 		try(Connection con = ds.getConnection()) {
 			String sql = "select * from personal_color";
@@ -30,7 +30,8 @@ public class PersonalDaoimpl implements PersonalDao {
 			}
 	} catch (Exception e) {
 		throw e;
-	} return personalList;
+	}
+	return personalList;
 }
 	
 	private Personal mapToPersonal(ResultSet rs) throws SQLException {
@@ -51,13 +52,7 @@ public class PersonalDaoimpl implements PersonalDao {
 
 	@Override
 	public Personal findById(Integer id) {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
-	}
-
-	@Override
-	public List<Personal> getAllpersonals() throws Exception {
-		// TODO 自動生成されたメソッド・スタブ
+		
 		return null;
 	}
 }

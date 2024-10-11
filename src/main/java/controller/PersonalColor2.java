@@ -22,12 +22,8 @@ public class PersonalColor2 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PersonalDao dao = PersonalDaoFactory.createPersonalDao();
-		try {
-			List<Personal> List = dao.getAllpersonals();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+			List<Personal> PersonalList = PersonalDao.findAll();
+			
 		request.getRequestDispatcher("/WEB-INF/view/personalColorChoice.jsp")
 				.forward(request, response);
 	}
@@ -36,6 +32,8 @@ public class PersonalColor2 extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		//jspに記載　question(設問)choice1～4(選択肢)result(結果)explanation(各パーソナルカラー別説明)
 		//パラメータの取得
+		String strId = request.getParameter("id"); 
+		Integer id = Integer.parseInt(strId); 
 		String question = request.getParameter("question");
 		String choice1 = request.getParameter("choice1");
 		String choice2 = request.getParameter("choice2");
@@ -44,14 +42,16 @@ public class PersonalColor2 extends HttpServlet {
 		String result = request.getParameter("result");
 		String explanation = request.getParameter("explanation");
 		PersonalDao personalDao = PersonalDaoFactory.createPersonalDao();
-		
+		Personal personal_color;
+		try {
+			personal_color = personalDao.findById(id);
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+		request.setAttribute("question", personal_color.getQuestion());
 		//choiceのうちどれか一つでも押したら次のquestionに遷移
 		//questionのidは5、表の縦軸にパーソナルカラーのちがい横軸に質問の種類
 		//反復で最後のquestionまで回す　最後まで回したら結果(result)と説明文(explanatoin)を出す　それが難しかったら、同じページの該当するパーソナルカラーの場所に移動する
-		
-		while (.()) {
-			type type = (type) it.next();
-			
-		}
 	}
 	}
