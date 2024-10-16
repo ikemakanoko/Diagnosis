@@ -9,30 +9,33 @@
 <link rel="stylesheet" href="">
 </head>
 <body>
-	<h1>会員登録</h1>
-	
-	<c:if test="${!empty error }">
-		<p><c:out value="${error }" /></p>
-	</c:if>
-	
-	<form action="" method="post">
+	<div style="text-align: center">
+		<h1>会員登録</h1>
+
+		<c:if test="${!empty error }">
+			<p>
+				<c:out value="${error }" />
+			</p>
+		</c:if>
+
+		<form action="" method="post">
+			<p>
+				ログインID： <input type="text" name="id">
+			</p>
+
+			<p>
+				パスワード：<input type="text" name="pass">
+			</p>
+
+			<p>
+				<input type="submit" value="登録">
+			</p>
+
+		</form>
 		<p>
-			ログインID： <input type="text" name="id">
+			<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ
 		</p>
-		
-		<p>パスワード：<input type="text" name="pass"></p>
-		
-		<p>
-			<input type="submit" value="登録">
-		</p>
-
-	</form>
-
-	<p>
-	<a href="register">会員登録</a>
-	</p>
-	<p><a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</p>
-
+	</div>
 
 
 

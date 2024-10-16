@@ -19,7 +19,7 @@ public class PersonalDaoimpl implements PersonalDao {
 	}
 
 	@Override
-	public List<Personal> findAll() {
+	public List<Personal> findById() {
 		List<Personal> personalList = new ArrayList<>();
 		try(Connection con = ds.getConnection()) {
 			String sql = "select * from personal_color";

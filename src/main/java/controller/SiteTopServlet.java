@@ -3,7 +3,6 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,13 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/siteTop")
 public class SiteTopServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	public void init(ServletConfig config) throws ServletException {
-		super.init(config);
-		Integer count = 1;
-		ServletContext application = config.getServletContext();
-		application.setAttribute("count", count);
-	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -33,9 +25,6 @@ public class SiteTopServlet extends HttpServlet {
 
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
-	}
-
-	public void destroy() {
 	}
 
 }

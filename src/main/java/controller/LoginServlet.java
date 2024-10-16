@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.Daofactory;
 import dao.UserDao;
-import dao.UserDaofactory;
 import domain.User;
 
 /**
@@ -19,9 +19,6 @@ import domain.User;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -37,11 +34,11 @@ public class LoginServlet extends HttpServlet {
 		try {
 			String loginId = request.getParameter("loginId");
 			String loginPass = request.getParameter("loginPass");
-			UserDao userDao = UserDaofactory.createUserDao();
+			UserDao userDao = Daofactory.createUserDao();
 			User user = userDao.findByLoginIdAndLoginPass(loginId, loginPass);
 			if (user != null) {
 				request.getSession().setAttribute("userName", user.getName());
-				response.sendRedirect("listItem");
+				response.sendRedirect("siteTop");
 			} else {
 				request.setAttribute("error", true);
 				request.getRequestDispatcher("/WEB-INF/view/login.jsp")

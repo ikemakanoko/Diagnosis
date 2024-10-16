@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.AnimalDaoFactory;
 import dao.CatDogDao;
+import dao.Daofactory;
 import domain.Catdog;
 
 /**
@@ -24,7 +24,7 @@ public class MusicalInstrument2 extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			//DAOによるデータ取得
-			CatDogDao catDogDao = AnimalDaoFactory.createCatDogDao();
+			CatDogDao catDogDao = Daofactory.createCatDogDao();
 			List<Catdog> catDogList = catDogDao.findAll();
 
 			request.setAttribute("animal", catDogList);
@@ -49,7 +49,7 @@ public class MusicalInstrument2 extends HttpServlet {
 		System.out.println(id);
 		
 		// DAOからデータ取得 一覧表示
-		CatDogDao catDogDao = AnimalDaoFactory.createCatDogDao();
+		CatDogDao catDogDao = Daofactory.createCatDogDao();
 		List<Catdog> catDogList = catDogDao.findAll();
 		
 		if (id == null) {

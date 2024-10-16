@@ -4,21 +4,29 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class AnimalDaoFactory {
-	
+public class Daofactory {
+
+	public static LocationDao createLocationDao() {
+		return new LocationDaoImpl(getDataSource());
+	}
+
+	public static UserDao createUserDao() {
+		return new UserDaoImpl(getDataSource());
+	}
+
 	public static CatDogDao createCatDogDao() {
 		return new AnimalDaoImpl(getDataSource());
-		
 	}
+	
+	public static PersonalDao createPersonalDao() {
+		return new PersonalDaoimpl(getDataSource());
+	}
+
 	private static DataSource getDataSource() {
-		//オブジェクトを用意し、null(何を入れるか決めてない)をする　それをctx,dsに代入
 		InitialContext ctx = null;
 		DataSource ds = null;
-		//try catchで囲む
 		try {
-			//naming属性
 			ctx = new InitialContext();
-			//データベースから目的のものを探す
 			ds = (DataSource) ctx.lookup("java:comp/env/jdbc/diagnosis_db");
 		} catch (NamingException e) {
 			if (ctx != null) {

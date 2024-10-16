@@ -18,7 +18,7 @@
 		<a href="login">ログイン画面に戻る</a>
 	</p>
 	<p>
-		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
+		<a href="siteTop">サイトトップ</a>
 	</p>
 	</div>
 </body>

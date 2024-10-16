@@ -5,33 +5,38 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ログイン画面</title>
 <link rel="stylesheet" href="">
 </head>
 <body>
 	<h1>サイト名</h1>
 	<div style="text-align: center">
+
 		<h1>ログイン</h1>
 
 		<c:if test="${!empty error }">
-			<p>
-				<c:out value="${error }" />
-			</p>
+			<div class="alert alert-danger" role="alert">
+				ログインIDまたはパスワードが間違っています。</div>
 		</c:if>
 
+
 		<form action="" method="post">
-			<p>
-				ログインID： <input type="text" name="loginid">
-			</p>
+			<div class="form-floating">
+				<input type="text" name="loginId"
+					class="form-control rounded-0 rounded-top" id="floatingInput"
+					placeholder="ログインID"> <label for="floatingInput"></label>
+			</div>
 
 			<!-- 開発用にtext 公開時にはpasswordに変更 -->
-			<p>
-				パスワード：<input type="text" name="loginpass">
-			</p>
+			<div class="form-floating mb-3">
+				<input type="password" name="loginPass"
+					class="form-control border-top-0 rounded-0 rounded-bottom"
+					id="floatingPassword" placeholder="パスワード"> <label
+					for="floatingPassword"></label>
+			</div>
 
-			<p>
-				<input type="submit" value="ログイン">
-			</p>
+			<input class="w-100 btn btn-lg btn-primary mb-3" type="submit"
+				value="ログイン">
 
 		</form>
 
@@ -40,10 +45,11 @@
 		<a href="register">新規会員登録</a>
 		<p>会員登録をすると回答のデータを保存して後から見直すことができます</p>
 		<p>
-			<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
+			<a href="siteTop">サイトトップ</a>
 		</p>
 	</div>
 
-	<script></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
 </body>
 </html>
