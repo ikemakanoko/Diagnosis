@@ -5,15 +5,19 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>ログイン画面</title>
+<title>ログイン</title>
 <link rel="stylesheet" href="">
 </head>
 <body>
-	<h1>サイト名</h1>
+	<h1>にゃんでも診断</h1>
 	<div style="text-align: center">
 
 		<h1>ログイン</h1>
 
+		<c:if test="${empty error }">
+			<div class="alert alert-danger" role="alert">
+				ログインIDとパスワードを入力してください。</div>
+		</c:if>
 		<c:if test="${!empty error }">
 			<div class="alert alert-danger" role="alert">
 				ログインIDまたはパスワードが間違っています。</div>
@@ -23,18 +27,18 @@
 		<form action="" method="post">
 			<div class="form-floating">
 				<input type="text" name="loginId"
-					class="form-control rounded-0 rounded-top" id="floatingInput"
-					placeholder="ログインID"> <label for="floatingInput"></label>
+					class="form-control rounded-0 rounded-top"
+					id="floatingInput" placeholder="ログインID"> 
+					<label for="floatingInput"></label>
 			</div>
 
-			<!-- 開発用にtext 公開時にはpasswordに変更 -->
 			<div class="form-floating mb-3">
 				<input type="password" name="loginPass"
 					class="form-control border-top-0 rounded-0 rounded-bottom"
-					id="floatingPassword" placeholder="パスワード"> <label
-					for="floatingPassword"></label>
+					id="floatingPassword" placeholder="パスワード"> 
+					<label for="floatingPassword"></label>
 			</div>
-
+	<br>
 			<input class="w-100 btn btn-lg btn-primary mb-3" type="submit"
 				value="ログイン">
 

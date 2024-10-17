@@ -9,8 +9,10 @@
 <body>
 	<header style="text-align: center">
 		<h1>にゃんでも診断</h1>
-		<img src="images/cat_yannnoka_step_cha.png" width="250" align="right">
-		<img src="images/cat_yannnoka_step_cha.png" width="250" align="left">
+		<img src="images/cat_yannnoka_step_cha.png"
+		width="250" align="right">
+		<img src="images/cat_yannnoka_step_cha.png"
+		width="250" align="left">
 		<br>
 		<h2>いろんな診断ができます！
 		<br>自分のことをもっと知れちゃうかも⁈</h2>
@@ -21,7 +23,7 @@
 	<br><br>
 	<main>
 		<h2>
-			<a href="/Diagnosis/musicalInstrument">いぬねこどっち</a>
+			<a href="/Diagnosis/musicalInstrument">いぬねこどっち(test)</a>
 		</h2>
 			<p>いぬ派ですか？ねこ派ですか？</p>
 			<img src="images/inuneko.jpg" width="250" align=""> <br>
@@ -36,13 +38,15 @@
 			<a href="/Diagnosis/PersonalColorServlet">パーソナルカラー診断</a>
 		</h2>
 			<p>パーソナルカラーを診断できます。おすすめのコスメや服の色などがわかります。</p>
-			<img src="images/1629616293476-mrdpqQTTvJ.webp" width="250" align="">
+			<img src=
+			"images/1629616293476-mrdpqQTTvJ.webp" width="250" align="">
 		
 		<h2>
 			<a href="/Diagnosis/StasionStartServlet">山手線診断</a>
 		</h2>
 			<p>あなたを山手線の駅にたとえると何駅か診断しちゃいます！</p>
-			<img src="images/5a1ca6844851a863007e6a984dbd4d00_t.jpeg" width="250" align=""> <br>
+			<img src=
+			"images/5a1ca6844851a863007e6a984dbd4d00_t.jpeg" width="250" align=""> <br>
 		
 		<h3>
 			<a href="/Diagnosis/RegisterServlet">会員登録</a>
