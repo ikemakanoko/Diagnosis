@@ -6,10 +6,13 @@ import domain.Personal;
 
 public interface PersonalDao {
 	//データの選択
-	static List<Personal> findAll() throws Exception {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
-	}
+	List<Personal> findAll() throws Exception;
 	
 	Personal findById(Integer id) throws Exception;
+	
+	void insert(Personal personal) throws Exception;
+	
+	void update(Personal personal) throws Exception;
+	
+	void delete(Personal personal) throws Exception;
 }

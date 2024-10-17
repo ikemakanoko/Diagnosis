@@ -46,7 +46,7 @@
 
 
 		<p>会員登録をしていない方はこちら↓</p>
-		<a href="register">新規会員登録</a>
+		<a href="/Diagnosis/RegisterServlet">新規会員登録</a>
 		<p>会員登録をすると回答のデータを保存して後から見直すことができます</p>
 		<p>
 			<a href="siteTop">サイトトップ</a>
