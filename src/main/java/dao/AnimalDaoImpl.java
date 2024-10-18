@@ -23,7 +23,7 @@ public class AnimalDaoImpl implements CatDogDao {
 		List<Catdog> catdogList = new ArrayList<>();
 
 		try (Connection con = ds.getConnection()) {
-			String sql = "SELECT * FROM diagnosis_db.animal";
+			String sql = "SELECT * FROM diagnosis_db.animal_table";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
@@ -39,7 +39,7 @@ public class AnimalDaoImpl implements CatDogDao {
 	public Catdog findById(Integer id) throws Exception {
 		List<Catdog> catdogList = new ArrayList<>();
 		try (Connection con = ds.getConnection()) {
-		String sql = "animal from animal_table where id=1";
+		String sql = "SELECT * from animal_table where ";
 		PreparedStatement stmt = con.prepareStatement(sql);
 		ResultSet rs = stmt.executeQuery();
 		return null;

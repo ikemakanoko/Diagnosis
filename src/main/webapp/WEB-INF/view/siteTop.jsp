@@ -23,7 +23,7 @@
 	<br><br>
 	<main>
 		<h2>
-			<a href="/Diagnosis/musicalInstrument">いぬねこどっち(test)</a>
+			<a href="/Diagnosis/catDogStart">いぬねこどっち(test)</a>
 		</h2>
 			<p>いぬ派ですか？ねこ派ですか？</p>
 			<img src="images/inuneko.jpg" width="250" align=""> <br>

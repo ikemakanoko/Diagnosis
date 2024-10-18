@@ -16,8 +16,8 @@ import domain.Catdog;
 /**
  * Servlet implementation class MusicalInstument
  */
-@WebServlet("/musicalInstument2")
-public class MusicalInstrument2 extends HttpServlet {
+@WebServlet("/catDogServlet2")
+public class CatDogServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,7 +30,7 @@ public class MusicalInstrument2 extends HttpServlet {
 			request.setAttribute("animal", catDogList);
 
 			//jspへフォワード
-			request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentChoice.jsp")
+			request.getRequestDispatcher("/WEB-INF/view/catdogChoice.jsp")
 					.forward(request, response);
 		} catch (Exception e) {
 			throw new ServletException(e);
@@ -46,24 +46,35 @@ public class MusicalInstrument2 extends HttpServlet {
 		String animal = request.getParameter("animal");
 		String id = request.getParameter("id"); // ユーザーの選択を取得
 
-		System.out.println(id);
+		System.out.println(animal);
 		
 		// DAOからデータ取得 一覧表示
 		CatDogDao catDogDao = Daofactory.createCatDogDao();
 		List<Catdog> catDogList = catDogDao.findAll();
 		
+//		if (id == null) {
+//			animal = "エラー";
+//		} else if (id.equals("Yes")) {
+//			animal = "ねこ";
+//		} else {
+//			animal = "いぬ";
+//		}
+		
 		if (id == null) {
 			animal = "エラー";
-		} else if (id.equals("Yes")) {
-			animal = "ねこ";
 		} else {
-			animal = "いぬ";
+			for(Catdog val : catDogList) {
+				if(val.getChoice().equals(id)) {
+					animal = val.getAnimal();
+				}
+				System.out.println(val.getChoice());
+			}
 		}
 		// 結果をリクエストにセット
 		request.setAttribute("animal", animal);
 
 		// 結果画面の表示
-		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentResult.jsp")
+		request.getRequestDispatcher("/WEB-INF/view/catdogResult.jsp")
 				.forward(request, response);
 	}
 }

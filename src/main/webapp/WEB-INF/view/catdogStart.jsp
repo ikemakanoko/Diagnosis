@@ -15,7 +15,7 @@
 		<h1>いぬねこどっち？</h1>
 		<p>いぬかねこかどっちなんだい！</p>
 		<h2>
-			<a href="http://localhost:8080/Diagnosis/musicalInstument2">START</a>
+			<a href="/Diagnosis/catDogServlet2">START</a>
 		</h2>
 		<p>
 			<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ

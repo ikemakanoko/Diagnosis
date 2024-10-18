@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/resultServlet")
-public class MusicalinstrumentResultServlet extends HttpServlet {
+@WebServlet("/catDogResult")
+public class CatDogResultServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentResult.jsp")
+		request.getRequestDispatcher("/WEB-INF/view/catdogResult.jsp")
 				.forward(request, response);
 
 	}
@@ -24,7 +24,7 @@ public class MusicalinstrumentResultServlet extends HttpServlet {
 		// 文字化け防止
 		request.setCharacterEncoding("UTF-8");
 
-		request.getRequestDispatcher("/WEB-INF/view/musicalinstrumentResult.jsp")
+		request.getRequestDispatcher("/WEB-INF/view/catdogResult.jsp")
 				.forward(request, response);
 
 	}
