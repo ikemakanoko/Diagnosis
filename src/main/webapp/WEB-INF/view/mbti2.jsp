@@ -37,7 +37,7 @@
 		<p>
 			<input type="radio" name="questionSN" value="N" id="NS">
 			<!-- Nの質問 -->
-			<label for="NS">想像力には自身がある。「かもしれない」という発想がたくさん出てくる。理想主義である。</label>
+			<label for="NS">想像力には自信がある。「かもしれない」という発想がたくさん出てくる。理想主義である。</label>
 		</p>
 
 		<h2>Q3</h2>

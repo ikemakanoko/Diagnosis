@@ -21,6 +21,10 @@ public class Daofactory {
 	public static PersonalDao createPersonalDao() {
 		return new PersonalDaoimpl(getDataSource());
 	}
+	
+	public static MbtiDao createMbtiDao() {
+		return new MbtiDaoImpl(getDataSource());
+	}
 
 	private static DataSource getDataSource() {
 		InitialContext ctx = null;
