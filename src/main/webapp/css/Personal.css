@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+
+
+/*内側余白*/
+/* padding: 10px;/* 上下左右 10px */
+/*padding: 10px 20px;/*上下 10px 左右 20px */
+/*padding: 10px 20px 30px;/* 上10px 左右20　下30 */
+/*padding: 10px 20px 30px 40px; 上10　右20　下30　左40 */
+/*外側余白*/
+/*margin: 50px;*/
+/*margin-top: 200px;*/
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.box1, .box2, .box3, .box4 {
+	height: 100px;
+	width: 100px;
+}

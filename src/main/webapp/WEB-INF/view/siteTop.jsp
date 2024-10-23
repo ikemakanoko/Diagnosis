@@ -14,10 +14,9 @@
 		<img src="images/cat_yannnoka_step_cha.png"
 		width="250" align="left">
 		<br>
-		<h2>いろんな診断ができます！
-		<br>自分のことをもっと知れちゃうかも⁈</h2>
+		<h2>いろんな診断ができます！</h2>
 		<p>🐈あなたは${count}人目の訪問者です🐈</p>
-		<br>
+		<br><br>
 	</header>
 	
 	<br><br>
@@ -44,7 +43,7 @@
 		<h2>
 			<a href="/Diagnosis/StasionStartServlet">山手線診断</a>
 		</h2>
-			<p>あなたを山手線の駅にたとえると何駅か診断しちゃいます！</p>
+			<p>あなたを山手線の駅にたとえると何駅か診断します！</p>
 			<img src=
 			"images/5a1ca6844851a863007e6a984dbd4d00_t.jpeg" width="250" align=""> <br>
 		

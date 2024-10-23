@@ -60,64 +60,6 @@ public class MbtiServlet2 extends HttpServlet {
 		//アルファベットを順番に並べて表示
 		String result = questionEIValue + questionSNValue + questionTFValue + questionJPValue;
 
-		
-		if (id == null) {
-			result = "error";
-	} else {
-		for (Mbti val : mbtiList){
-			if (val.getChoice().equals(id)) {
-				result = val.getMbti();
-			}
-				System.out.println(val.getChoice());
-			}
-		}
-//	}else if(result.equals("ENTP"))
-//	{
-//		result = "mbtiList";
-//	}else if(result.equals("ENFJ"))
-//	{
-//		result = "mbtiList";
-//	}else if(result.equals("ENFP"))
-//	{
-//		result = "mbtiList";
-//	}else if(result.equals("ESTJ"))
-//	{
-//		result = "mbtiList";
-//	}else if(result.equals("ESTP"))
-//	{
-//		result = "mbtiList";
-//	}else if(result.equals("ESFJ"))
-//	{
-//		result = "mbtiList";
-//	}else if(result.equals("ESFJ"))
-//	{
-//		result = "mbtiList";
-//	}else if(result.equals("INTJ"))
-//	{
-//		result = "result";
-//	}else if(result.equals("INTP"))
-//	{
-//		result = "result";
-//	}else if(result.equals("INFJ"))
-//	{
-//		result = "result";
-//	}else if(result.equals("INFP"))
-//	{
-//		result = "result";
-//	}else if(result.equals("ISTJ"))
-//	{
-//		result = "result";
-//	}else if(result.equals("ISTP"))
-//	{
-//		result = "result";
-//	}else if(result.equals("ISFJ"))
-//	{
-//		result = "result";
-//	}else if(result.equals("ISFP"))
-//	{
-//		result = "result";
-//	}
-
 	request.setAttribute("result",result);
 	//完了画面の表示
 	request.getRequestDispatcher("/WEB-INF/view/mbti2.jsp").forward(request,response);
