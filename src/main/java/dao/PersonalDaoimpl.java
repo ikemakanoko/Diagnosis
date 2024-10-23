@@ -58,6 +58,7 @@ public class PersonalDaoimpl implements PersonalDao {
 		return null;
 	}
 	private Personal mapToPersonal(ResultSet rs) throws Exception {
+		Personal personal = new Personal(null, null, null, null, null, null, null);
 		Integer id = (Integer) rs.getObject("id");
 		String question = rs.getString("question");
 		String choice1 = rs.getString("choice1");
@@ -66,6 +67,6 @@ public class PersonalDaoimpl implements PersonalDao {
 		String choice4 = rs.getString("choice4");
 		String result = rs.getString("result");
 		
-		return new Personal(id, question);
+		return new Personal(id, question, choice1, choice2, choice3, choice4, result);
 	}
 }

@@ -26,16 +26,12 @@ public class PersonalColor2 extends HttpServlet {
 			try {
 				PersonalDao personalDao = Daofactory.createPersonalDao();
 				List<Personal> PersonalList = personalDao.findAll();
-				
 				request.setAttribute("personalList", PersonalList);
 				request.getRequestDispatcher("/WEB-INF/view/personalColorChoice.jsp")
 						.forward(request, response);
 			} catch (Exception e) {
-				
+				throw new ServletException(e);
 			}
-			
-		request.getRequestDispatcher("/WEB-INF/view/personalColorChoice.jsp")
-				.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,7 +46,6 @@ public class PersonalColor2 extends HttpServlet {
 		String choice3 = request.getParameter("choice3");
 		String choice4 = request.getParameter("choice4");
 		String result = request.getParameter("result");
-		String explanation = request.getParameter("explanation");
 		PersonalDao personalDao = Daofactory.createPersonalDao();
 		try {
 			List<Personal> personalList = personalDao.findAll();
@@ -72,7 +67,6 @@ public class PersonalColor2 extends HttpServlet {
 		request.setAttribute("choice4", choice4);
 		request.setAttribute("question", question);
 		request.setAttribute("result", result);
-		request.setAttribute("explanation", explanation);
 		
 		for(Personal val : PersonalList) {
 			if(val.getChoice().equals(id)) {
