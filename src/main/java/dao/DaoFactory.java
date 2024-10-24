@@ -4,7 +4,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class DaoFactory {
+public class Daofactory {
 
 	public static LocationDao createLocationDao() {
 		return new LocationDaoImpl(getDataSource());

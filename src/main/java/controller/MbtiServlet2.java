@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DaoFactory;
+import dao.Daofactory;
 import dao.MbtiDao;
 import domain.Mbti;
 
@@ -24,7 +24,7 @@ public class MbtiServlet2 extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			//DAOによるデータ取得
-			MbtiDao mbtiDao = DaoFactory.createMbtiDao();
+			MbtiDao mbtiDao = Daofactory.createMbtiDao();
 			List<Mbti> mbtiList = mbtiDao.findAll();
 
 			request.setAttribute("mbti", mbtiList);
@@ -43,14 +43,19 @@ public class MbtiServlet2 extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		// フォームデータの取得
-		String id = request.getParameter("id"); 
+		String id = request.getParameter("id");
 		String questionEIValue = request.getParameter("questionEI");
 		String questionSNValue = request.getParameter("questionSN");
 		String questionTFValue = request.getParameter("questionTF");
 		String questionJPValue = request.getParameter("questionJP");
 
-		MbtiDao mbtiDao = DaoFactory.createMbtiDao();
-		List<Mbti> mbtiList = mbtiDao.findAll();
+		MbtiDao mbtiDao = Daofactory.createMbtiDao();
+		try {
+			List<Mbti> mbtiList = mbtiDao.findAll();
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 
 		request.setAttribute("questionEI", questionEIValue);
 		request.setAttribute("questionSN", questionSNValue);
@@ -60,7 +65,8 @@ public class MbtiServlet2 extends HttpServlet {
 		//アルファベットを順番に並べて表示
 		String result = questionEIValue + questionSNValue + questionTFValue + questionJPValue;
 
-	request.setAttribute("result",result);
-	//完了画面の表示
-	request.getRequestDispatcher("/WEB-INF/view/mbti2.jsp").forward(request,response);
-}}
+		request.setAttribute("result", result);
+		//完了画面の表示
+		request.getRequestDispatcher("/WEB-INF/view/mbti2.jsp").forward(request, response);
+	}
+}

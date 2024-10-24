@@ -28,19 +28,32 @@ public class MbtiDaoImpl implements MbtiDao{
 	}
 
 	@Override
-	public List<Mbti> findAll() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
+	public List<Mbti> findAll() throws Exception {
+		List<Mbti> mbtiList = new ArrayList<>();
+		
+		try (Connection con = ds.getConnection()){
+			String sql = "select * mbti *";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				mbtiList.add(mapToMbti(rs));
+			}
+		} catch (Exception e) {
+			throw e;
+		}
+		return mbtiList;
 	}
 
 	@Override
 	public Mbti findById(Integer id) throws Exception {
 		List<Mbti> mbtiList = new ArrayList<>();
+		
 		try (Connection con = ds.getConnection()){
-			String sql = "select * from mbti where ";
+			String sql = "select * from mbti where";
 			PreparedStatement stmt = con.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 		} catch (Exception e) {
+			throw e;
 		}
 		return null;
 	}

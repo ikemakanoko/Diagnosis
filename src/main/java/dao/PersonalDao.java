@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import domain.Personal;
@@ -8,11 +9,16 @@ public interface PersonalDao {
 	//データの選択
 	List<Personal> findAll() throws Exception;
 	
-	Personal findById(Integer id) throws Exception;
+	Personal findById(String string) throws Exception;
+	
+	String questionTitle() throws Exception;
 	
 	void insert(Personal personal) throws Exception;
 	
 	void update(Personal personal) throws Exception;
 	
 	void delete(Personal personal) throws Exception;
+
+	Personal findByChoice(String string) throws SQLException;
+	
 }

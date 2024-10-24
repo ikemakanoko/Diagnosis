@@ -1,4 +1,7 @@
 <%@ page pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,30 +17,22 @@
 		<form action="" method="post">
 			<!-- 選択肢１画像も入れる -->
 			<div class="box1">
-				<h2>
-					<input type="button" name=choice1 value=choice1>${choice1}
-				</h2>
+					<input type="submit" name="choice1" value="choice1">
 			</div>
 			<!-- 選択肢２画像も入れる -->
 			<div class="box2">
-				<h2>
-					<input type="button" name=choice2 value=choice2>${choice2}
-				</h2>
+					<input type="submit" name="choice2" value="choice2">
 			</div>
 			<!-- 選択肢3画像も入れる -->
 			
 			<div class="box3">
-				<h2>
-					<input type="button" name=choice3 value=choice3>${choice3}
-				</h2>
+					<input type="submit" name="choice3" value="choice3">
 			</div>
 			
 			<!-- 選択肢4画像も入れる -->
-			<div class="clearfix"><div class="box4">
-				<h2>
-					<input type="button" name=choice4 value=choice4>${choice4}
-				</h2>
-			</div></div>
+			<div class="box4">
+					<input type="submit" name="choice4" value="choice4">
+			</div>
 		</form>
 
 		<h1>${result}</h1>

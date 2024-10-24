@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.CatDogDao;
-import dao.DaoFactory;
+import dao.Daofactory;
 import domain.Catdog;
 
 /**
@@ -24,7 +24,7 @@ public class CatDogServlet2 extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			//DAOによるデータ取得
-			CatDogDao catDogDao = DaoFactory.createCatDogDao();
+			CatDogDao catDogDao = Daofactory.createCatDogDao();
 			List<Catdog> catDogList = catDogDao.findAll();
 
 			request.setAttribute("animal", catDogList);
@@ -49,7 +49,7 @@ public class CatDogServlet2 extends HttpServlet {
 		System.out.println(animal);
 		
 		// DAOからデータ取得 一覧表示
-		CatDogDao catDogDao = DaoFactory.createCatDogDao();
+		CatDogDao catDogDao = Daofactory.createCatDogDao();
 		List<Catdog> catDogList = catDogDao.findAll();
 		
 //		if (id == null) {
