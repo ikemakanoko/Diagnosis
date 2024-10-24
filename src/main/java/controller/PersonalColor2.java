@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Daofactory;
+import dao.DaoFactory;
 import dao.PersonalDao;
 import domain.Personal;
 
@@ -22,9 +22,9 @@ public class PersonalColor2 extends HttpServlet {
 	private static final Personal[] PersonalList = null;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PersonalDao dao = Daofactory.createPersonalDao();
+		PersonalDao dao = DaoFactory.createPersonalDao();
 			try {
-				PersonalDao personalDao = Daofactory.createPersonalDao();
+				PersonalDao personalDao = DaoFactory.createPersonalDao();
 				List<Personal> PersonalList = personalDao.findAll();
 				request.setAttribute("personalList", PersonalList);
 				request.getRequestDispatcher("/WEB-INF/view/personalColorChoice.jsp")
@@ -46,7 +46,7 @@ public class PersonalColor2 extends HttpServlet {
 		String choice3 = request.getParameter("choice3");
 		String choice4 = request.getParameter("choice4");
 		String result = request.getParameter("result");
-		PersonalDao personalDao = Daofactory.createPersonalDao();
+		PersonalDao personalDao = DaoFactory.createPersonalDao();
 		try {
 			List<Personal> personalList = personalDao.findAll();
 		} catch (Exception e) {

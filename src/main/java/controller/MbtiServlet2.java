@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Daofactory;
+import dao.DaoFactory;
 import dao.MbtiDao;
 import domain.Mbti;
 
@@ -24,7 +24,7 @@ public class MbtiServlet2 extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			//DAOによるデータ取得
-			MbtiDao mbtiDao = Daofactory.createMbtiDao();
+			MbtiDao mbtiDao = DaoFactory.createMbtiDao();
 			List<Mbti> mbtiList = mbtiDao.findAll();
 
 			request.setAttribute("mbti", mbtiList);
@@ -49,7 +49,7 @@ public class MbtiServlet2 extends HttpServlet {
 		String questionTFValue = request.getParameter("questionTF");
 		String questionJPValue = request.getParameter("questionJP");
 
-		MbtiDao mbtiDao = Daofactory.createMbtiDao();
+		MbtiDao mbtiDao = DaoFactory.createMbtiDao();
 		List<Mbti> mbtiList = mbtiDao.findAll();
 
 		request.setAttribute("questionEI", questionEIValue);

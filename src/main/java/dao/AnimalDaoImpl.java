@@ -59,5 +59,6 @@ public class AnimalDaoImpl implements CatDogDao {
 		String choice = rs.getString("choice");
 
 		return new Catdog(id, animal, choice);
+
 	}
 }

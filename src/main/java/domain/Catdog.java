@@ -46,3 +46,4 @@ public class Catdog {
 		this.choice = choice;
 	}
 }
+
