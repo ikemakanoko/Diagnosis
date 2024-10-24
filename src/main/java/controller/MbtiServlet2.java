@@ -33,12 +33,23 @@ public class MbtiServlet2 extends HttpServlet {
 		String questionSNValue = request.getParameter("questionSN");
 		String questionTFValue = request.getParameter("questionTF");
 		String questionJPValue = request.getParameter("questionJP");
+
+		MbtiDao mbtiDao = Daofactory.createMbtiDao();
+		List<Mbti> mbtiList = mbtiDao.findAll();
+
+		request.setAttribute("id", id);
+		request.setAttribute("questionEI", questionEIValue);
+		request.setAttribute("questionSN", questionSNValue);
+		request.setAttribute("questionTF", questionTFValue);
+		request.setAttribute("questionJP", questionJPValue);
+
+		//アルファベットを順番に並べて表示
 		String result = questionEIValue + questionSNValue + questionTFValue + questionJPValue;
-
-		request.setAttribute("result", result);
-
-		//完了画面の表示
-		request.getRequestDispatcher("/WEB-INF/view/mbti2.jsp")
-				.forward(request, response);
-	}
-}
+		
+		//選択結果によってidの番号を割り振り、その番号に対応するMBTIを表示させる
+		
+		
+	request.setAttribute("result",result);
+	//完了画面の表示
+	request.getRequestDispatcher("/WEB-INF/view/mbti2.jsp").forward(request,response);
+}}
