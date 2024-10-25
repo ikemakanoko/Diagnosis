@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 						.forward(request, response);
 			}
 		} catch (Exception e) {
-//			throw new ServletException(e);
+			throw new ServletException(e);
 		}
 	}
 

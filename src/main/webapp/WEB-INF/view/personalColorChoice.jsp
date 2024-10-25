@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -13,31 +13,42 @@
 </head>
 <body>
 	<div style="text-align: center">
-		<h1>${question}</h1>
+		<h1>パーソナルカラー診断</h1>
+		<div class="title">
+			<h2>${question}</h2>
+		</div>
 		<form action="" method="post">
 			<!-- 選択肢１画像も入れる -->
-			<div class="box1">
-					<input type="submit" name="choice1" value="choice1">
+			<div class="clearfix">
+				<div class="box1">
+					<a
+						href="<input type="submit" name="choice1" value="choice1">
+					<img src="images/ブルべ夏スカイブルー正方形.png" style="width: 200px">
+					</a>
 			</div>
-			<!-- 選択肢２画像も入れる -->
+			
 			<div class="box2">
-					<input type="submit" name="choice2" value="choice2">
-			</div>
-			<!-- 選択肢3画像も入れる -->
+					<a href="<input type="submit" name="choice2" value="choice2">
+					<img src="images/ブルべ冬ディープロイヤルブルー正方形.png" style="width: 200px">
+					</a>
+			</div></div>
 			
 			<div class="box3">
-					<input type="submit" name="choice3" value="choice3">
+					<a href="<input type="submit" name="choice3" value="choice3">
+					<img src="images/イエベ秋テラコッタ正方形.png" style="width: 200px">
+					</a>
 			</div>
 			
-			<!-- 選択肢4画像も入れる -->
 			<div class="box4">
-					<input type="submit" name="choice4" value="choice4">
+					<a href="<input type="submit" name="choice4" value="choice4">
+					<img src="images/イエベ春カナリー正方形.png" style="width: 200px">
+					</a>
 			</div>
+			
 		</form>
 
-		<h1>${result}</h1>
-		<p>${explanation}</p>
-		<br> <br> <br> <br> <br> <br>
+		<h2>${result}</h2>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
 		<h1>おすすめアイテム</h1>
 
 		<h2>イエベ春の方におすすめのコスメ</h2>

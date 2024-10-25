@@ -32,7 +32,6 @@ public class Mbti {
 	}
 
 	public Object getChoice() {
-		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}
 	

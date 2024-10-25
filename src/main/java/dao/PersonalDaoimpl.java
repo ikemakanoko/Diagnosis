@@ -54,7 +54,7 @@ public class PersonalDaoimpl implements PersonalDao {
 	}
 
 	private Personal mapToPersonal(ResultSet rs) throws Exception {
-		Personal personal = new Personal(null, null, null, null, null, null, null);
+		Personal personal = new Personal(null, null, null, null, null, null, null, null);
 		Integer id = (Integer) rs.getObject("id");
 		String question = rs.getString("question");
 		String choice1 = rs.getString("choice1");
@@ -62,27 +62,27 @@ public class PersonalDaoimpl implements PersonalDao {
 		String choice3 = rs.getString("choice3");
 		String choice4 = rs.getString("choice4");
 		String result = rs.getString("result");
-		
-		return new Personal(id, question, choice1, choice2, choice3, choice4, result);
+		String color = rs.getString("color");
+
+		return new Personal(id, question, choice1, choice2, choice3, choice4, result, color);
 	}
-	
+
 	public Personal findByChoice(String choice) throws SQLException {
 		String sql = "SELECT * FROM personal WHERE choice = ?";
 		try (Connection conn = getConnection();
-		    PreparedStatement stmt = conn.prepareStatement(sql)) {
-		    stmt.setString(1, choice);
-		        try (ResultSet rs = stmt.executeQuery()) {
-		            if (rs.next()) {
-		                return new Personal(
-		                    rs.getInt("id"),
-		                    rs.getString("choice"),
-		                    rs.getString("result"), sql, sql, sql, sql
-		                );
-		            }
-		        }
-		    }
-		    return null; // 該当する結果が見つからない場合
+				PreparedStatement stmt = conn.prepareStatement(sql)) {
+			stmt.setString(1, choice);
+			try (ResultSet rs = stmt.executeQuery()) {
+				if (rs.next()) {
+					return new Personal(
+							rs.getInt("id"),
+							rs.getString("choice"),
+							rs.getString("result"), sql, sql, sql, sql, sql);
+				}
+			}
 		}
+		return null; // 該当する結果が見つからない場合
+	}
 
 	private Connection getConnection() {
 		// TODO 自動生成されたメソッド・スタブ
@@ -112,4 +112,10 @@ public class PersonalDaoimpl implements PersonalDao {
 		return titleString;
 	}
 
+	@Override
+	public String result() throws Exception {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
 	}
+
+}

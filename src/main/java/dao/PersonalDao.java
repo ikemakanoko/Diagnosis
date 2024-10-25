@@ -10,8 +10,12 @@ public interface PersonalDao {
 	List<Personal> findAll() throws Exception;
 	
 	Personal findById(String string) throws Exception;
+
+	Personal findByChoice(String string) throws SQLException;
 	
 	String questionTitle() throws Exception;
+	
+	String result() throws Exception;
 	
 	void insert(Personal personal) throws Exception;
 	
@@ -19,6 +23,5 @@ public interface PersonalDao {
 	
 	void delete(Personal personal) throws Exception;
 
-	Personal findByChoice(String string) throws SQLException;
 	
 }

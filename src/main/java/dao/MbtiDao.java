@@ -5,7 +5,7 @@ import java.util.List;
 import domain.Mbti;
 
 public interface MbtiDao {
-	List<Mbti> findAll() throws Exception;
+	List<Mbti> findAll();
 
 	Mbti findById(Integer id) throws Exception;
 }

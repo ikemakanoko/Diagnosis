@@ -10,8 +10,10 @@
 </head>
 <body>
 	<!-- 画像を表示させたい -->
-	<img src="/Diagnosis/src/main/webapp/WEB-INF/view/images/capital_b.png"
-		alt="">
+	<img src="images/capital_m.png" alt="">
+	<img src="images/capital_b.png" alt="">
+	<img src="images/capital_t.png" alt="">
+	<img src="images/capital_i.png" alt="">
 	<h1>MBTI診断</h1>
 	<p>二つの質問のうち、一つだけあなたの考え方にあてはまるものを選んでください。</p>
 	<p>診断ボタンを押すと診断結果が表示されます。</p>

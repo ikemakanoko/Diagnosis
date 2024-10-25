@@ -17,10 +17,15 @@
 }
   
 .box1, .box2, .box3, .box4 {
-	display: flex;
 	height: 200px;
 	width: 200px;
-	}
-.box1, .box2, .box3{
 	float: left;
+	margin: 30px;
+	text-align: center;
 	}
+
+.title {
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;;	
+    font-weight: bold;
+}
