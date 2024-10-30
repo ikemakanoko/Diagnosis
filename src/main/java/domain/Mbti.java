@@ -9,7 +9,7 @@ public class Mbti {
 		
 	}
 	
-	public Mbti(Integer id, String mbti) {
+	public Mbti(Integer id, String mbti, String choose) {
 		this.id = id;
 		this.mbti = mbti;
 		
@@ -32,6 +32,7 @@ public class Mbti {
 	}
 
 	public Object getChoice() {
+		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}
 	

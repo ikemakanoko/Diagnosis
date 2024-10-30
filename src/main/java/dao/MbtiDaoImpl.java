@@ -47,8 +47,7 @@ public class MbtiDaoImpl implements MbtiDao{
 	private Mbti mapToMbti(ResultSet rs) throws Exception {
 		Integer id = (Integer) rs.getObject("id");
 		String mbti = rs.getString("mbti");
-		String choice = rs.getString("choice");
-		return new Mbti(id, mbti);
+		return new Mbti(id, mbti, mbti);
 	}
 
 }

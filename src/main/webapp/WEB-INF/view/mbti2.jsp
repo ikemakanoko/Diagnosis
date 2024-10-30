@@ -67,7 +67,8 @@
 		</p>
 		<br>
 		<p>
-			<a href=""><input type="submit" value="診断"></a>
+			<input type="submit" value="診断">
+			
 		</p>
 	</form>
 

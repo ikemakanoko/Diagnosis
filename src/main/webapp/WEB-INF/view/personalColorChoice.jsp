@@ -9,7 +9,8 @@
 
 <title>回答選択</title>
 <link rel="stylesheet" href="css/Personal.css">
-
+<script>
+</script>
 </head>
 <body>
 	<div style="text-align: center">
@@ -21,8 +22,7 @@
 			<!-- 選択肢１画像も入れる -->
 			<div class="clearfix">
 				<div class="box1">
-					<a
-						href="<input type="submit" name="choice1" value="choice1">
+					<a href="<input type="submit" name="choice1" value="choice1">
 					<img src="images/ブルべ夏スカイブルー正方形.png" style="width: 200px">
 					</a>
 			</div>
@@ -104,8 +104,6 @@
 		<p>
 			<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
 		</p>
-		<!-- 外部Jsファイルの読み込み -->
-		<script src="js/personalScript.js"></script>
 	</div>
 </body>
 </html>

@@ -41,36 +41,28 @@ public class MbtiServlet2 extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		// フォームデータの取得
-		String idValue = request.getParameter("id");
 		String questionEIValue = request.getParameter("questionEI");
 		String questionSNValue = request.getParameter("questionSN");
 		String questionTFValue = request.getParameter("questionTF");
 		String questionJPValue = request.getParameter("questionJP");
-
-		MbtiDao mbtiDao = Daofactory.createMbtiDao();
-		List<Mbti> mbtiList = mbtiDao.findAll();
+		
+		System.out.println(questionEIValue);
+		System.out.println(questionSNValue);
+		System.out.println(questionTFValue);
+		System.out.println(questionJPValue);
 
 		request.setAttribute("questionEI", questionEIValue);
 		request.setAttribute("questionSN", questionSNValue);
 		request.setAttribute("questionTF", questionTFValue);
 		request.setAttribute("questionJP", questionJPValue);
-		request.setAttribute("id", idValue);
+//		request.setAttribute("id", id);
 
 		//アルファベットを順番に並べて表示
 		String result = questionEIValue + questionSNValue + questionTFValue + questionJPValue;
 
-		if (idValue == null) {
-			result = "error";
-		} else {
-			for (Mbti val : mbtiList) {
-				if (val.getChoice().equals(idValue)) {
-					result = val.getMbti();
-				}
-				System.out.println(val.getChoice());
-			}
-		}
 		request.setAttribute("result", result);
-		//完了画面の表示
+		
+//		完了画面の表示
 		request.getRequestDispatcher("/WEB-INF/view/mbti2.jsp").forward(request, response);
 	}
 }

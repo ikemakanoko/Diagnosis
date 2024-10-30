@@ -52,14 +52,6 @@ public class CatDogServlet2 extends HttpServlet {
 		CatDogDao catDogDao = Daofactory.createCatDogDao();
 		List<Catdog> catDogList = catDogDao.findAll();
 		
-//		if (id == null) {
-//			animal = "エラー";
-//		} else if (id.equals("Yes")) {
-//			animal = "ねこ";
-//		} else {
-//			animal = "いぬ";
-//		}
-		
 		if (id == null) {
 			animal = "エラー";
 		} else {
