@@ -73,6 +73,7 @@
 	</form>
 
 	<h1>${result}</h1>
+	<h2>${errorMessage}</h2>
 	<h2>診断結果</h2>
 	<p>
 		<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>

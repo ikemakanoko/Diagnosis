@@ -10,11 +10,11 @@ import javax.sql.DataSource;
 
 import domain.Catdog;
 
-public class AnimalDaoImpl implements CatDogDao {
+public class CatdogDaoImpl implements CatDogDao {
 
 	private DataSource ds;
 
-	public AnimalDaoImpl(DataSource ds) {
+	public CatdogDaoImpl(DataSource ds) {
 		this.setDs(ds);
 	}
 

@@ -41,28 +41,30 @@ public class MbtiServlet2 extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		// フォームデータの取得
-		String questionEIValue = request.getParameter("questionEI");
-		String questionSNValue = request.getParameter("questionSN");
-		String questionTFValue = request.getParameter("questionTF");
-		String questionJPValue = request.getParameter("questionJP");
-		
-		System.out.println(questionEIValue);
-		System.out.println(questionSNValue);
-		System.out.println(questionTFValue);
-		System.out.println(questionJPValue);
+		String qsEIValue = request.getParameter("questionEI");
+		String qsSNValue = request.getParameter("questionSN");
+		String qsTFValue = request.getParameter("questionTF");
+		String qsJPValue = request.getParameter("questionJP");
 
-		request.setAttribute("questionEI", questionEIValue);
-		request.setAttribute("questionSN", questionSNValue);
-		request.setAttribute("questionTF", questionTFValue);
-		request.setAttribute("questionJP", questionJPValue);
-//		request.setAttribute("id", id);
+		// エラーメッセージの変数を用意
+		String errorMessage = null;
 
-		//アルファベットを順番に並べて表示
-		String result = questionEIValue + questionSNValue + questionTFValue + questionJPValue;
+		// 入力チェック: nullまたは空文字かを確認
+		if (qsEIValue == null || qsSNValue == null || qsTFValue == null || qsJPValue == null ||
+				qsEIValue.isEmpty() || qsSNValue.isEmpty() || qsTFValue.isEmpty() || qsJPValue.isEmpty()) {
+			errorMessage = "すべての質問に回答してください。";
+		} else {
+			// アルファベットを順番に並べて表示
+			String result = qsEIValue + qsSNValue + qsTFValue + qsJPValue;
+			request.setAttribute("result", result);
+		}
 
-		request.setAttribute("result", result);
-		
-//		完了画面の表示
+		// エラーメッセージをリクエストにセット（メッセージがある場合のみ）
+		if (errorMessage != null) {
+			request.setAttribute("errorMessage", errorMessage);
+		}
+
+		// フォワード
 		request.getRequestDispatcher("/WEB-INF/view/mbti2.jsp").forward(request, response);
 	}
 }

@@ -31,9 +31,19 @@ public class Mbti {
 		this.mbti = mbti;
 	}
 
-	public Object getChoice() {
+	public String getqsEIValue() {
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
+	}
+
+	public Object getType() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
+
+	public void setType(String string) {
+		// TODO 自動生成されたメソッド・スタブ
+		
 	}
 	
 }

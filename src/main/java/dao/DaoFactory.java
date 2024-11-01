@@ -15,7 +15,7 @@ public class Daofactory {
 	}
 
 	public static CatDogDao createCatDogDao() {
-		return new AnimalDaoImpl(getDataSource());
+		return new CatdogDaoImpl(getDataSource());
 	}
 	
 	public static PersonalDao createPersonalDao() {
