@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>サイトのトップページ</title>
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="css/top.css">
 </head>
 <body>
 	<header style="text-align: center">
@@ -22,9 +22,9 @@
 	<br><br>
 	<main>
 		<h2>
-			<a href="/Diagnosis/catDogStart">いぬねこどっち(test)</a>
+			<a href="/Diagnosis/catDogStart">どうぶつ診断</a>
 		</h2>
-			<p>いぬ派ですか？ねこ派ですか？</p>
+			<p>文章</p>
 			<img src="images/inuneko.jpg" width="250" align=""> <br>
 		
 		<h2>
@@ -43,7 +43,7 @@
 		<h2>
 			<a href="/Diagnosis/StasionStartServlet">山手線診断</a>
 		</h2>
-			<p>あなたを山手線の駅にたとえると何駅か診断します！</p>
+			<p>あなたを山手線の駅にたとえると何駅か診断します</p>
 			<img src=
 			"images/5a1ca6844851a863007e6a984dbd4d00_t.jpeg" width="250" align=""> <br>
 		

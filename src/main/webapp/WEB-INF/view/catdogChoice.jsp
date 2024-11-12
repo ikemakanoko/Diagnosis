@@ -13,7 +13,7 @@
 	<div style="text-align: center">
 	<form action="" method="post">
 		<h1>質問</h1>
-		<p>ニャー???</p>
+		<p>${question}</p>
 		<h2>
 			<input type="submit" value=Yes name=id>&ensp;
 			<input type="submit" value=No name=id>

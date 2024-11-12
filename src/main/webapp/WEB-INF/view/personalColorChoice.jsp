@@ -6,49 +6,34 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-
 <title>回答選択</title>
 <link rel="stylesheet" href="css/Personal.css">
-<script>
-</script>
 </head>
 <body>
 	<div style="text-align: center">
 		<h1>パーソナルカラー診断</h1>
-		<div class="title">
-			<h2>${question}</h2>
-		</div>
-		<form action="" method="post">
-			<!-- 選択肢１画像も入れる -->
 			<div class="clearfix">
 				<div class="box1">
-					<a href="<input type="submit" name="choice1" value="choice1">
-					<img src="images/ブルべ夏スカイブルー正方形.png" style="width: 200px">
-					</a>
+					<a href="#"><img src="images/ブルべ夏スカイブルー正方形.png"
+						style="width: 200px"></a>
+				</div>
+				<div class="box2">
+					<a href="#"><img src="images/ブルべ冬ディープロイヤルブルー正方形.png"
+						style="width: 200px"></a>
+				</div>
+				<div class="box3">
+					<a href="#"><img src="images/イエベ秋テラコッタ正方形.png"
+						style="width: 200px"></a>
+				</div>
+				<div class="box4">
+					<a href="#"><img src="images/イエベ春カナリー正方形.png"
+						style="width: 200px"></a>
+				</div>
 			</div>
-			
-			<div class="box2">
-					<a href="<input type="submit" name="choice2" value="choice2">
-					<img src="images/ブルべ冬ディープロイヤルブルー正方形.png" style="width: 200px">
-					</a>
-			</div></div>
-			
-			<div class="box3">
-					<a href="<input type="submit" name="choice3" value="choice3">
-					<img src="images/イエベ秋テラコッタ正方形.png" style="width: 200px">
-					</a>
-			</div>
-			
-			<div class="box4">
-					<a href="<input type="submit" name="choice4" value="choice4">
-					<img src="images/イエベ春カナリー正方形.png" style="width: 200px">
-					</a>
-			</div>
-			
 		</form>
 
 		<h2>${result}</h2>
-		<br><br><br><br><br><br><br><br><br><br><br><br>
+
 		<h1>おすすめアイテム</h1>
 
 		<h2>イエベ春の方におすすめのコスメ</h2>
@@ -97,10 +82,7 @@
 		<h2>ブルべ冬の方へのおすすめカラー</h2>
 		<img src="images/ダウンロード.png" style="width: 300px"> <br> <br>
 		<br>
-
-		<noscript>
-			<h1>JavaScriptを有効にしてください。</h1>
-		</noscript>
+		
 		<p>
 			<a href="http://localhost:8080/Diagnosis/siteTop">サイトトップ</a>
 		</p>
