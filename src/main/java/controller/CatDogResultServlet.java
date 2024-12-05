@@ -16,7 +16,6 @@ public class CatDogResultServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.getRequestDispatcher("/WEB-INF/view/catdogResult.jsp")
 				.forward(request, response);
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -26,7 +25,5 @@ public class CatDogResultServlet extends HttpServlet {
 
 		request.getRequestDispatcher("/WEB-INF/view/catdogResult.jsp")
 				.forward(request, response);
-
 	}
-
 }
